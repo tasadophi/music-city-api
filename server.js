@@ -5,7 +5,7 @@ const tracksWithId = require("./data/tracksWithId");
 const artistsWithId = require("./data/artistsWithId");
 const playListsWithId = require("./data/playListsWithId");
 
-export const app = express();
+const app = express();
 const port = 8000;
 
 const allowedOrigins = [
@@ -73,4 +73,4 @@ app.listen(port, () => {
   console.log(`music app listening on port ${port}`);
 });
 
-export const handler = serverless(app);
+module.exports = app;
