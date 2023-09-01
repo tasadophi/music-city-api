@@ -1,5 +1,4 @@
 const express = require("express");
-import serverless from "serverless-http";
 const cors = require("cors");
 const tracksWithId = require("./data/tracksWithId");
 const artistsWithId = require("./data/artistsWithId");
