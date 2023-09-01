@@ -1,11 +1,11 @@
 const express = require("express");
 import serverless from "serverless-http";
 const cors = require("cors");
-const tracksWithId = require("../../data/tracksWithId");
-const artistsWithId = require("../../data/artistsWithId");
-const playListsWithId = require("../../data/playListsWithId");
+const tracksWithId = require("./data/tracksWithId");
+const artistsWithId = require("./data/artistsWithId");
+const playListsWithId = require("./data/playListsWithId");
 
-const app = express();
+export const app = express();
 const port = 8000;
 
 const allowedOrigins = [
