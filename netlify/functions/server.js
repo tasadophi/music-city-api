@@ -1,7 +1,8 @@
 const express = require("express");
-const tracksWithId = require("./data/tracksWithId");
-const artistsWithId = require("./data/artistsWithId");
-const playListsWithId = require("./data/playListsWithId");
+import serverless from "serverless-http";
+const tracksWithId = require("../../data/tracksWithId");
+const artistsWithId = require("../../data/artistsWithId");
+const playListsWithId = require("../../data/playListsWithId");
 
 const app = express();
 const port = 8000;
@@ -47,3 +48,5 @@ app.get("/playlist/:id", (req, res) => {
 app.listen(port, () => {
   console.log(`music app listening on port ${port}`);
 });
+
+export const handler = serverless(app);
