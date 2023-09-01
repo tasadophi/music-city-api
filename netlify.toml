@@ -10,7 +10,3 @@
   from = "/*"
   status = 200
   to = "/.netlify/functions/server/:splat"
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
